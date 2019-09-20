@@ -52,56 +52,56 @@ var WebViewAndroid = createClass({
 
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.shouldOverrideWithResult,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.shouldOverrideWithResult,
       [shouldOverride]
     );
   },
   goBack: function() {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.goBack,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.goBack,
       null
     );
   },
   goForward: function() {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.goForward,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.goForward,
       null
     );
   },
   reload: function() {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.reload,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.reload,
       null
     );
   },
   stopLoading: function() {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.stopLoading,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.stopLoading,
       null
     );
   },
   evaluateJavascript: function(data) {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.evaluateJavascript,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.evaluateJavascript,
       [String(data)]
     );
   },
   postMessage: function(data) {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.postMessage,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.postMessage,
       [String(data)]
     );
   },
   injectJavaScript: function(data) {
     RCTUIManager.dispatchViewManagerCommand(
       this._getWebViewHandle(),
-      RCTUIManager.RNWebViewAndroid.Commands.injectJavaScript,
+      RCTUIManager.getViewManagerConfig("RNWebViewAndroid").Commands.injectJavaScript,
       [data]
     );
   },
